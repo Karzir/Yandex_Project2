@@ -4,6 +4,7 @@ import conf
 from layer import Layer
 
 
+# Класс отвечающий за отрисовку начального экрана
 class GameStart(pygame.sprite.Sprite):
     def __init__(self, *groups):
         self._layer = Layer.UI

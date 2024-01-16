@@ -5,6 +5,7 @@ import random
 from layer import Layer
 
 
+# Класс отвечающий за спавн и движение колон
 class Column(pygame.sprite.Sprite):
     def __init__(self, *groups):
         self._layer = Layer.OBSTACLE

@@ -4,6 +4,7 @@ import conf
 from layer import Layer
 
 
+# Класс отвечающий за отрисовку заднего фона
 class Background(pygame.sprite.Sprite):
     def __init__(self, index, *groups):
         self._layer = Layer.BACKGROUND
@@ -13,6 +14,8 @@ class Background(pygame.sprite.Sprite):
         super().__init__(*groups)
 
     def update(self):
+        # Движение заднего фона для эффекта "движения" игрока/----------------------------------------------------------
         self.rect.x -= 2
         if self.rect.right <= 0:
             self.rect.x = conf.SCREEN_WIDTH
+        # --------------------------------------------------------------------------------------------------------------
